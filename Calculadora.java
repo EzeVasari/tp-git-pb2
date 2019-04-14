@@ -8,7 +8,7 @@ public class Ahorcado {
   private Integer resultado;
     
    do{
-    System.out.println("Ingrese su operación /n 1 para sumar /n 2 para restar /n 3 para multiplicar /n 4 para dividir");
+    System.out.println("Ingrese su operación /n 1 para dividir /n 2 para multiplicar /n 3 para suma /n 4 para resta");
      
     opcion = teclado.next();
       
@@ -21,19 +21,21 @@ public class Ahorcado {
  
      switch(opcion) {
      case 1:
-    	 resultado = a + b;
+        if (b != 0) {
+    	 resultado = a / b;
+       } else {
+        System.out.println("Error, no se puede realizar"); }
     	 break;
      case 2:
-    	 resultado = a - b;
-    	 break;
-     case 3: 
     	 resultado = a * b;
     	 break;
+     case 3: 
+    	 resultado = a + b;
+    	 break;
      case 4: 
-    	 if (b != 0) {
-				resultado = a / b;
-			} else {
-				System.out.println("Error, no se puede realizar"); }
+    	 
+				resultado = a - b;
+			
     	 break;
      }
  System.out.println("El resultado es " + resultado.toString());
