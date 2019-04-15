@@ -26,13 +26,13 @@ public class Ahorcado {
        } else {
         System.out.println("Error, no se puede realizar"); }
     	 break;
-     case 2:
+     case 4:
     	 resultado = a * b;
     	 break;
      case 3: 
     	 resultado = a + b;
     	 break;
-     case 4: 
+     case 2: 
     	 
 				resultado = a - b;
 			
