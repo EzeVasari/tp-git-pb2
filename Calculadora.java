@@ -19,25 +19,23 @@ public class Ahorcado {
     System.out.println("Ingrese el segundo numero");
      b = teclado.next();
  
-     switch(opcion) {
-     case 1:
-        if (b != 0) {
-    	 resultado = a / b;
-       } else {
-        System.out.println("Error, no se puede realizar"); }
-    	 break;
-     case 2:
-    	 resultado = a * b;
-    	 break;
-     case 3: 
-    	 resultado = a + b;
-    	 break;
-     case 4: 
-    	 
-				resultado = a - b;
-			
-    	 break;
-     }
+     public String multiplicar (String a, String b) {
+    	 String respuesta = "";
+    	 respuesta = (Double.parseDouble(a)* Double.parseDouble(b))+"";
+    	 return respuesta;
+
+    	 }
+    	 public String dividir (String a, String b) {
+    	 String respuesta = "";
+    	 try {
+    	 respuesta = (Double.parseDouble(a)/ Double.parseDouble(b))+"";
+    	 }
+    	 catch (Exception e) {
+    	 respuesta ="Error al dividir por cero";
+    	 }
+    	 return respuesta;
+
+    	 }
  System.out.println("El resultado es " + resultado.toString());
  }
 }
