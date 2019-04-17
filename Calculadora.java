@@ -1,4 +1,5 @@
-import java.util.Scanner;
+public class Calculadora {
+
 
 public class Ahorcado {
 	public static void main(String[] args) {
@@ -8,7 +9,7 @@ public class Ahorcado {
   private Integer resultado;
     
    do{
-    System.out.println("Ingrese su operación /n 1 para dividir /n 2 para multiplicar /n 3 para suma /n 4 para resta");
+    System.out.println("Ingrese su operaciï¿½n /n 1 para dividir /n 2 para multiplicar /n 3 para suma /n 4 para resta");
      
     opcion = teclado.next();
       
@@ -40,4 +41,44 @@ public class Ahorcado {
      }
  System.out.println("El resultado es " + resultado.toString());
  }
+=======
+	private Integer operandoUno = 0, operandoDos = 0;
+
+	public void asignarOperandos(Integer op1, Integer op2) {
+
+		this.operandoUno = op1;
+		this.operandoDos = op2;
+	}
+
+	public Integer suma() {
+		Integer resultado;
+		resultado = this.operandoUno + this.operandoDos;
+
+		return resultado;
+	}
+        
+    public Integer resta(){
+        Integer resultado;
+		resultado = this.operandoUno - this.operandoDos;
+
+		return resultado;
+    }
+        
+    public Integer multiplicacion(){
+        Integer resultado;
+        resultado = this.operandoUno * this.operandoDos;
+        
+        return resultado;
+    }
+        
+    public Integer division(){
+        Integer resultado;
+        resultado = this.operandoUno / this.operandoDos;
+        
+        return resultado;
+    }
+
+}
+
+  
 }
