@@ -1,44 +1,56 @@
-
 public class Calculadora {
 
-	private Integer operandoUno = 0, operandoDos = 0;
+  private Integer numeroA;
+  private Integer numeroB;
+  
+  public Calculadora(){
 
-	public void asignarOperandos(Integer op1, Integer op2) {
+  }
 
-		this.operandoUno = op1;
-		this.operandoDos = op2;
-	}
+public Calculadora(Integer operadorA , Integer operadorB){
 
-	public Integer suma() {
-		Integer resultado;
-		resultado = this.operandoUno + this.operandoDos;
-
-		return resultado;
-	}
-        
-    public Integer resta(){
-        Integer resultado;
-		resultado = this.operandoUno - this.operandoDos;
-
-		return resultado;
-    }
-        
-    public Integer multiplicacion(){
-        Integer resultado;
-        resultado = this.operandoUno * this.operandoDos;
-        
-        return resultado;
-    }
-        
-    public Integer division(){
-        Integer resultado;
-        resultado = this.operandoUno / this.operandoDos;
-        
-        return resultado;
-    }
-
+  this.numeroA = operadorA;
+  this.numeroB = operadorB; 
 }
 
-  
 
+
+public Integer suma(Integer a , Integer b){
+
+  Integer suma =0;
+
+  return suma = a+b;
+}
+
+public Integer resta(Integer a , Integer b){
+
+  Integer resta =0;
+
+  return resta = a-b;
+}
+
+public Integer multiplicacion(Integer a , Integer b){
+
+  Integer multiplicacion =0;
+
+  return multiplicacion = a*b;
+}
+
+public Double division (Double a , Double b){
+
+  Double division =0.0D;
+
+  if (b != 0) {
+        division = a / b;
+       } 
+
+       else {
+        
+        System.out.println("Error, no se puede realizar"); 
+    }
+
+    return division;
+
+}
+    
 }

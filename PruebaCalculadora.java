@@ -15,7 +15,7 @@ public class Ahorcado {
     Calculadora miCalculadora = new Calculadora();  
     
     do{
-    System.out.println("Ingrese su operación /n 1 para dividir /n 2 para multiplicar /n 3 para suma /n 4 para resta");
+    System.out.println("Ingrese su operaciÃ³n /n 1 para dividir /n 2 para multiplicar /n 3 para suma /n 4 para resta");
      
     opcion = teclado.next();
       
