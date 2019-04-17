@@ -1,7 +1,7 @@
 public class Calculadora {
 
-  private Integer a;
-  private Integer b;
+  private Integer numeroA;
+  private Integer numeroB;
   
   public Calculadora(){
 
@@ -9,26 +9,26 @@ public class Calculadora {
 
 public Calculadora(Integer operadorA , Integer operadorB){
 
-  this.a = operadorA;
-  this.b = operadorB; 
+  this.numeroA = operadorA;
+  this.numeroB = operadorB; 
 }
 
 public Integer getA(){
-  return this.a;
+  return this.numeroA;
 }
 
 public void setA(Integer nuevoValorDeA){
 
-  this.a= nuevoValorDeA;
+  this.numeroA= nuevoValorDeA;
 }
 
 public Integer getB(){
-  return this.a;
+  return this.numeroB;
 }
 
 public void setB(Integer nuevoValorDeB){
 
-  this.a= nuevoValorDeB;
+  this.numeroB= nuevoValorDeB;
 }
 
 public Integer suma(Integer a , Integer b){
