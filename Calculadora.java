@@ -13,23 +13,7 @@ public Calculadora(Integer operadorA , Integer operadorB){
   this.numeroB = operadorB; 
 }
 
-public Integer getA(){
-  return this.numeroA;
-}
 
-public void setA(Integer nuevoValorDeA){
-
-  this.numeroA= nuevoValorDeA;
-}
-
-public Integer getB(){
-  return this.numeroB;
-}
-
-public void setB(Integer nuevoValorDeB){
-
-  this.numeroB= nuevoValorDeB;
-}
 
 public Integer suma(Integer a , Integer b){
 
@@ -69,5 +53,4 @@ public Double division (Double a , Double b){
 
 }
     
-  
 }

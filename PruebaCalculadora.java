@@ -1,69 +1,50 @@
 import java.util.Scanner;
-public class PruebaCalculadora {
+
+public class Ahorcado {
 	public static void main(String[] args) {
-  Integer a=0;
-  Integer b=0 ;
-  Double a1=0.0;
-  Double b1=0.0;
-  Integer opcion = 0;
-  
-
-  Scanner teclado = new Scanner(System.in);
-
-  Calculadora calculadora1 = new Calculadora();
+  private Integer op1;
+  private Integer op2;
+  private Integer opcion;
+  private Integer resultado;
     
-   do{
-    System.out.println("Ingrese su operación \n 1 para dividir \n 2 para multiplicar \n 3 para suma \n 4 para resta");
+    public void asignarOperandos(Integer op1, Integer op2){
+        this.operandoUno = op1;
+        this.operandoDos = op2;
+    }
+        
+    Calculadora miCalculadora = new Calculadora();  
+    
+    do{
+    System.out.println("Ingrese su operación /n 1 para dividir /n 2 para multiplicar /n 3 para suma /n 4 para resta");
      
-    opcion = teclado.nextInt();
+    opcion = teclado.next();
       
-   }while(opcion < 1 && opcion > 4);
- 
-     switch(opcion) {
+    }while(opcion < 1 && opcion > 4);
+    
+    System.out.println("Ingrese el primer numero");
+     a = teclado.next();
+    System.out.println("Ingrese el segundo numero");
+     b = teclado.next();
+      
+    miCalculadora.asignarOperandos(op1, op2);
+     
+    switch(opcion) {
      case 1:
-       System.out.println("Ingrese el primer numero");
-       a1 = teclado.nextDouble();
-       System.out.println("Ingrese el segundo numero");
-       b1 = teclado.nextDouble(); 
-
-       if(b1!=0){
-
-        System.out.println("El resultado es " +calculadora1.division(a1,b1));
-       }
-
-       else {
-
-         System.out.println("ERROR! NO SE PUEDE DIVIDIR POR 0 . \n Intente de nuevo :)");
-
-       }
-
-       
-       
-
-
+        if (b != 0) {
+    	 resultado = miCalculadora.division();
+       } else {
+        System.out.println("Error, no se puede realizar"); }
     	 break;
      case 2:
-       System.out.println("Ingrese el primer numero");
-       a = teclado.nextInt();
-       System.out.println("Ingrese el segundo numero");
-       b = teclado.nextInt();
-    	System.out.println("El resultado es " +calculadora1.multiplicacion(a,b));
+    	 resultado = miCalculadora.multiplicacion();
     	 break;
      case 3: 
-      System.out.println("Ingrese el primer numero");
-       a = teclado.nextInt();
-       System.out.println("Ingrese el segundo numero");
-       b = teclado.nextInt();
-    	 System.out.println("El resultado es " +calculadora1.suma(a,b));
+    	 resultado = miCalculadora.suma();
     	 break;
-     case 4:
-       System.out.println("Ingrese el primer numero");
-       a = teclado.nextInt();
-       System.out.println("Ingrese el segundo numero");
-       b = teclado.nextInt(); 
-    	 System.out.println("El resultado es " +calculadora1.resta(a,b));
-			
+     case 4: 
+    	 resultado = miCalculadora.resta();	
     	 break;
      }
+    
+        System.out.println("El resultado es " + resultado.toString());
  }
-}
